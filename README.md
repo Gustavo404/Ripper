@@ -1,6 +1,6 @@
 # Script de Separação e Renomeação de Notas Fiscais
 
-Este script em Python foi desenvolvido para automatizar a tarefa de separar um PDF contendo várias páginas de notas fiscais, onde cada página possui informações de destinatários diferentes. O script extrai o nome do destinatário de cada página e renomeia o arquivo PDF resultante com base nesse nome.
+Este script em Python foi desenvolvido para automatizar a tarefa de separar vários PDFs contendo várias páginas de notas fiscais, onde cada página possui informações de destinatários diferentes. O script extrai o nome do destinatário de cada página e renomeia o arquivo PDF resultante com base nesse nome.
 
 Pré-requisitos
 - Python 3.xhistor
@@ -14,12 +14,14 @@ pip install PyPDF2 pymupdf fitz
 
 # Como Usar
 
+Lembre-se que todos os PDFs que deseja processar devem estar isolados num diretorio exclusivo, a saida sempre vai para dump/
+
 1. Clone ou faça o download deste repositório.
 2. Abra um terminal e navegue até o diretório onde o script está localizado.
 3. Execute o script usando o seguinte comando:
 
 ```bash
-python ripper.py
+python ripper.py -d diretorio/
 ```
 
 O script solicitará o caminho do arquivo PDF que contém as notas fiscais. Certifique-se de fornecer o caminho correto para o seu arquivo.
