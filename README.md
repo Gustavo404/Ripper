@@ -19,7 +19,7 @@ pip install PyPDF2 pymupdf fitz
 3. Execute o script usando o seguinte comando:
 
 ```bash
-python separar_notas.py
+python ripper.py
 ```
 
 O script solicitará o caminho do arquivo PDF que contém as notas fiscais. Certifique-se de fornecer o caminho correto para o seu arquivo.
