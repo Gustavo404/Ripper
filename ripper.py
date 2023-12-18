@@ -1,3 +1,4 @@
+import argparse
 import fitz
 import os
 import re
@@ -45,8 +46,14 @@ def obter_destinatario(texto):
         # Se não encontrar um padrão correspondente, retorna uma string vazia
         return ""
 
-
 if __name__ == "__main__":
-    pdf_path = "NFE1.pdf"
-    output_directory = "dump/"
-    separar_e_renomear(pdf_path, output_directory)
+    parser = argparse.ArgumentParser(description="Separar e renomear páginas de um PDF")
+    parser.add_argument("-d", "--diretorio", required=True, help="Diretório contendo os PDFs")
+    args = parser.parse_args()
+
+    # Itera pelos arquivos no diretório fornecido
+    for file_name in os.listdir(args.diretorio):
+        if file_name.endswith(".pdf"):
+            pdf_path = os.path.join(args.diretorio, file_name)
+            output_directory = "dump/"
+            separar_e_renomear(pdf_path, output_directory)
